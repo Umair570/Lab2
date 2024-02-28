@@ -1,7 +1,8 @@
-#---------------------------------------
+#--------------------------------------
 #  Question Bank
-#    Student B
-#---------------------------------------
+#  Muhammad Talha Zulfiqar
+#  Roll No.(271046276)
+#--------------------------------------
 
 import random
 
@@ -9,14 +10,46 @@ import random
 questions = {
     "Science": [
         ("What is the chemical symbol for water?", "H2O"),
-        # Add more questions as tuples (question, answer)
-    ],
+        ("How many hearts does Octopus have?", "Three Hearts"),
+        ("What can exist in the three states at a time?", "Water")
+        ],
+    "Maths": [
+        ("What is obtained by adding two numbers and dividing them with two?" , "Average"),
+        ("How can we obtain the diameter of Circle?", "Radius * 2 ")
+        ],
+         
+    "Geography" : [
+        ("What are vertical imaginary lines on map are called?" ,"Meridians of Longitude"),
+        ("The most outer layer of rocks is called?", "Crust")
+        ],
+    
+    "Economics": [
+        ("A good used for further production is called?", "Capital Good")
+        ("What is a good called which is used for more than 3 years?", "Durable Good")
+        ("The satisfaction you get by consuming something is called?", "Utility")
+        ],
+    
 }
+
 
 hints = {
     "Science": [
-        # Pair each question with a corresponding hint.
+        ("Made up of Hydrojen and Oxygen")
+        ("More than one")
+        ("Essential for life")
+    "Maths": 
+        ("Middle Value")
+        ("Involves Radius")
+    "Geography":   
+        ("Based on Diameter")
+        ("Easily Accessible")
+    "Economics" : 
+        ("Bussiness Sector")
+        ("Long Life")
+        ("Luxury")
+        
     ],
+    
     # Repeat for other categories as needed.
 }
 
@@ -33,9 +66,12 @@ def select_random_question(category):
     - tuple: A tuple containing the selected question (str) and its corresponding answer (str).
     """
     #------------------------
-    # Add your code here
-    #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    if not category:
+            return "No questions available."
+
+    random_question = random.choice(category)
+    return random_question
+
     #------------------------
 
 #---------------------------------------
@@ -126,12 +162,19 @@ def display_correct_answer(correct_answer):
     - None
     """
     #------------------------
-    # Add your code here
+    print("Incorrect. The correct answer is:", correct_answer)
+
+player_answer = input("Pakistan")
+correct_answer = "Lahore"
+if validate_answer(player_answer, correct_answer):
+    print("Correct!")
+else:
+    display_correct_answer(correct_answer) 
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    
     #------------------------
 
-#---------------------------------------
+#--------------------------------------
 
 
 
